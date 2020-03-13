@@ -2,10 +2,85 @@
 <html>
 <head>
   <title>Tic-Tac-Toe</title>
-  <link rel="stylesheet" type="text/stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <!-- Header container -->
+  <div class="titleCont">
+    <span class="title">Tic-Tac-Toe</span>
+  </div>
+  <!-- Gameboard grid container -->
+  <div class="bcCont">
+    <!-- Gameboard grid -->
+    <div class="boardCont" style="visibility: hidden;">
+    </div>
+  </div>
+  <!-- PvP or PvAi buttons -->
+  <div class="settings" style="visibility: visible;">
+    <button class="solo">1 Player</button>
+    <button class="pvp">2 Players</button>
+  </div>
+  <!-- Easy, hard and back buttons -->
+  <div class="difficulty" style="visibility: hidden;">
+    <button class="easy">Easy</button>
+    <button class="hard">Impossible</button><br>
+    <button class="diffBack">Back</button>
+  </div>
+  <!-- End of match announcer and rematch / mainmenu buttons -->
+  <div class="endFormCont" style="visibility: hidden;">
+    <form class="endForm">
+      <label for="rematch" class="rematchLabel"></label><br>
+      <input type="button" value="Rematch" class="rematch"><br>
+      <input type="button" value="Main menu" class="menu">
+    </form>
+  </div>
+  <!-- PvsAi name form -->
+  <div class="soloFormCont" style="visibility: hidden;">
+    <form class="soloForm">
+      <fieldset class="soloFset">
+        <label for="soloName">Name:</label><br>
+        <input type="text" class="soloName" spellcheck="false" maxlength="18"><br>
+        <input type="button" class="soloMark" value="X">
+      </fieldset><br>
+      <input type="button" value="Play" class="soloPlay"><br>
+      <input type="button" value="Back" class="soloBack">
+    </form>
+  </div>
+  <!-- PvP name form -->
+  <div class="playerFormCont" style="visibility: hidden;">
+    <form class="playerForm">
+      <!-- Player 1 fieldset -->
+      <fieldset class="pvpFS" id="p1FS">
+        <legend>Player 1</legend>
+          <label for="p1name">Name:</label><br>
+          <input type="text" class="p1name" spellcheck="false" maxlength="18"><br>
+          <input type="button" class="p1mark" value="X">
+      </fieldset>
+      <!-- Player 2 fieldset -->
+      <fieldset class="pvpFS">
+        <legend>Player 2</legend>
+          <label for="p1name">Name:</label><br>
+          <input type="text" class="p2name" spellcheck="false" maxlength="18"><br>
+          <input type="button" class="p2mark" value="O">
+      </fieldset><br>
+      <input type="button" value="Play" class="play"><br>
+      <input type="button" value="Back" class="back">
+    </form>
+  </div>
+  <!-- Player 1 name -->
+  <div class="p1scoreCont" style="visibility: hidden;">
+    <span class="p1score"></span>
+  </div>
+  <!-- Player 2 name -->
+  <div class="p2scoreCont" style="visibility: hidden;">
+    <span class="p2score"></span>
+  </div>
+  <!-- Score -->
+  <div class="scoreCont" style="visibility: hidden;">
+    <span class="score">0 &nbsp;:&nbsp; 0</span><br>
+  </div>
 </body>
 <script src="js/script.js"></script>
 </html>
